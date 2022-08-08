@@ -3,8 +3,8 @@ const socket = io.connect();
 let html = ``
 
 //Mostrar productos
-function render(data) {
-    if (data.length === 0) {
+function render(datos) {
+    if (datos.length === 0) {
         html = `<tr>
         <td colspan="3">
             <center>No hay productos para mostrar</center>
@@ -12,7 +12,7 @@ function render(data) {
     </tr>`
     } else {
         html = ``
-        data.forEach(producto => {
+        datos.forEach(producto => {
             html += `<tr>
             <td>${producto.title}</td>
             <td>${producto.price}</td>
@@ -58,10 +58,10 @@ function addMessage(e) {
     return false;
 }
 
-socket.on('tabla', data => {
+socket.on('tabla', datos => {
     fetch('products.json')
         .then(response => response.json())
-        .then(render(data))
+        .then(render(datos))
         .catch(error => console.log(error))
 });
-socket.on('messages', data => renderMessages(data) )
+socket.on('messages', data => renderMessages(data))

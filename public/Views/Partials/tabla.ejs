@@ -7,17 +7,17 @@
         </tr>
     </thead>
     <tbody>
-        <% if (data.length === 0) { %>
+        <% if (datos.length === 0) { %>
             <tr>
                 <td colspan="3">No hay datos</td>
             </tr>
         <% }else{ %>
         
-        <% for (let i = 0; i < data.length; i++) { %>
+        <% for (let i = 0; i < datos.length; i++) { %>
             <tr>
-                <td><%= data[i].title %></td>
-                <td><%= data[i].price %></td>
-                <td><%= data[i].thumbnail %></td>
+                <td><%= datos[i].title %></td>
+                <td><%= datos[i].price %></td>
+                <td><%= datos[i].thumbnail %></td>
             </tr>
         <% } } %>
     </tbody>
