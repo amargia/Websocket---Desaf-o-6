@@ -1,0 +1,13 @@
+<div class="chat_window">
+    <h1 class="title">Centro de mensajes</h1>
+    <div class="bottom_wrapper clearfix">
+        <div class="messages" id="messages"></div>
+        <form action="/message" method="post" onsubmit="return addMessage(this)" class="form">          
+            <div class="message-bar">
+                <input class="message_input" id="username" type="text" placeholder="Type your email here..." required/>
+                <input class="message_input" id="texto" placeholder="Type your message here..." />        
+                <input class="text form-btn" type="submit" value="Enviar"> 
+            </div>
+        </form>
+    </div>
+</div>
