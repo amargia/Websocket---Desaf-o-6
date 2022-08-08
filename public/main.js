@@ -41,17 +41,17 @@ function render(datos) {
 function renderMessages(data) {
     const html = data.map((el, index) => {
         return(`<div>
-            <p>${el.author}</p>
+            <p>${el.email}</p>
             <p>[${el.text}]:</p>
             <p>${el.date}</p> </div>`)
     }).join(" ");
     document.getElementById('texto').innerHTML = html;
 }
   
-function addMessage(e) {
+function addMessage() {
     const mensaje = {
-        author: document.getElementById('username').value,
-        text: document.getElementById('texto').value,
+        author: document.getElementById('email').value,
+        text: document.getElementById('text').value,
         date: `${(new Date).toLocaleDateString()} - ${(new Date).toLocaleTimeString()}`
     };  
     socket.emit('new-message', mensaje);

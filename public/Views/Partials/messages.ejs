@@ -4,9 +4,9 @@
         <div class="messages" id="messages"></div>
         <form action="/message" method="post" onsubmit="return addMessage(this)" class="form">          
             <div class="message-bar">
-                <input class="form-control" id="author" type="text" placeholder="Type your email here..." required/>
+                <input class="form-control" id="email" type="text" placeholder="Type your email here..." required/>
                 <input class="form-control" id="text" placeholder="Type your message here..." />        
-                <input class="btn" type="submit" value="Enviar"> 
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
         </form>
     </div>
