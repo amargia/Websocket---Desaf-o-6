@@ -1,6 +1,7 @@
-const methodBank = require("../Products/products.js");
+const methodBank = require("../data/productos")
 
-class Container {
+class Contenedor { 
+  
   static getAll() {
     const productos = methodBank.list();
     return productos;
@@ -22,4 +23,4 @@ class Container {
   }
 }
 
-module.exports = Container;
+module.exports = Contenedor;
